@@ -1,0 +1,49 @@
+
+<div class="ui two column middle aligned relaxed grid basic segment">
+<div class="column left-container">
+  <div class="code">
+  <pre class="prettyprint linenums prettyprinted demo-code">
+
+
+//Model Event in serviceModel.js
+toggle: function(){
+ this.set('checked', !this.get('checked'));
+}
+
+
+//ListItem event to change model
+ when checkbox clicked
+events: {
+'click': 'toggleService'
+},
+toggleService: function(){
+ this.model.toggle();
+}
+
+
+//View Listens to collection Change and
+//reRender when changes
+var me = this;
+me.listenTo(me.services,'change',me.listRender);
+  </pre>
+  </div>
+</div>
+<div class="column right-container">
+		<h1>Our Services</h1>
+
+		<div class="ui list" id="services">
+						<!-- The services will be inserted here -->
+		</div>
+
+		<p id="total">total: <span>Nrs.</span>
+		<a class="ui black circular label">0</a>
+		</p>
+		<div id="showContent"></div>
+</div>
+</div>
+<div>
+	<a href="#demo2">
+		<i class="forward icon"></i>
+	</a>
+</div>
+

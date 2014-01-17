@@ -1,0 +1,61 @@
+h1 {
+	margin: 0 0 20px 0;
+	color: black;
+	line-height: 0.9em;
+	letter-spacing: 0.02em;
+	text-transform: none;
+	text-shadow: 0px 0px 6px rgba(0, 0, 0, 1.2);
+	font-size: 3.77em;
+	text-align:center;
+}
+
+h3{
+	margin: 0 0 20px 0;
+	color: black;
+	/*font-family: "News Cycle", Impact, sans-serif;*/
+	line-height: 0.9em;
+	letter-spacing: 0.02em;
+	text-transform: none;
+	text-shadow: none;
+	font-size: 1.55em;
+	text-align:center;
+}
+
+h2{
+	margin: 0 0 20px 0;
+	color: black;
+	/*font-family: "News Cycle", Impact, sans-serif;*/
+	line-height: 0.9em;
+	letter-spacing: 0.02em;
+	text-transform: none;
+	text-shadow: none;
+	font-size: 1.33em;
+	margin-left: 400px;
+}
+
+a{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	text-decoration: none;
+	vertical-align: baseline;
+	cursor: auto;
+}
+
+a:hover{
+	color: white;
+	background: rgba(0, 0, 0, 0.99);
+	text-shadow: none;
+}
+
+.demo-code{
+	font-size: 1.33em;
+	font-weight:bold;
+}
+
+strong{
+	font-size: 1.66em;
+}
+
