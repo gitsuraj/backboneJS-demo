@@ -5,7 +5,7 @@ define(["jquery","backbone","models/taskModel"],
     var TaskCollection = Backbone.Collection.extend({
 
       model: TaskModel,
-      url : 'http://localhost:8001/js/json/tasklist.json'
+      url : 'js/json/tasklist.json'
 
     });
     return TaskCollection;

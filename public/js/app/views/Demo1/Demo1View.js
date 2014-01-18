@@ -11,7 +11,6 @@ define(["jquery", "backbone", "views/Demo1/serviceListItem","models/serviceModel
 
             },
             events: {
-                'click .save' : 'saveServices'
             },
             render: function() {
                 var me = this;
@@ -36,12 +35,6 @@ define(["jquery", "backbone", "views/Demo1/serviceListItem","models/serviceModel
                 this.$el.find('#showContent').html(displayList.el);
                 //amplify.store("services",this.services);
                 //alert("Storage Successful");
-            },
-            showServices : function(e){
-                e.preventDefault();
-                var services = amplify.store("services");
-                var displayList = new ServiceListView({data:services}).render();
-                this.$el.find('#showContent').html(displayList.el);
             },
             afterRender: function(view){
                 view.services = new serviceCollection([

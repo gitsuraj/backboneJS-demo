@@ -26,11 +26,11 @@ define(["jquery", "backbone","views/Demo2/detailView","views/Demo2/taskList", "t
                 me.$el.find(".right-container").html(taskDetail.el);
 
             },
-            add_new_task_click: function(e){
+            add_new_task_click: function(events){
                 var me = this;
                 var taskDetail = new DetailView({"isNewEntry":true});
                 me.$el.find(".right-container").html(taskDetail.el);
-                e.preventDefault();
+                events.preventDefault();
             }
         });
         return View;

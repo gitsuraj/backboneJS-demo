@@ -13,7 +13,7 @@ define(["jquery", "backbone"],
                 "Description":""
             },
             validate: function(attrs) {
-                if(attrs.id != null) {
+                if(attrs.id !== null) {
                     console.log("you must pass id attribute");
                 }
             },

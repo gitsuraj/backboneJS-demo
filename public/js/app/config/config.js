@@ -32,6 +32,7 @@ require.config({
 
       // Plugins
       // -------
+      "views": "views",
       "backbone.validateAll": "../libs/plugins/Backbone.validateAll",
 
       "backbone.stickit" : "../libs/plugins/backbone.stickit.min",
@@ -67,7 +68,11 @@ require.config({
       "backbone.validateAll": ["backbone"],
       "backbone.stickit" :["backbone"],
 
-      "semantic": ["jquery"]
+      "semantic": ["jquery"],
+
+      "alertify" : {
+          "deps" : ["jquery"]
+      }
 
   }
 

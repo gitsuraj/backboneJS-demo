@@ -79,10 +79,10 @@ define(["jquery", "backbone", "models/Model","collections/Collection", "text!tem
                   _(view.$el.find('section')).each(function(section){
                     var slide = new Model({
                       elements:$(section).children(),
-                      no:view.no,
+                      no:view.no
                     });
                     prettyPrint();
-                    if(view.no == 0){
+                    if(Number(view.no) === 0){
                        view.renderPresentation(slide);
                     }
                     view.collection.add(slide);

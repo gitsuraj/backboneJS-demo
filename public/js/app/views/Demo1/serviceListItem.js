@@ -16,8 +16,9 @@ define(["jquery", "backbone", "text!templates/Demo1.html"],
                 me.$el.find('input').prop('checked', this.model.get('checked'));
                 return me;
             },
-            toggleService: function(){
+            toggleService: function(events){
                 this.model.toggle();
+                events.preventDefault();
             }
 
         });

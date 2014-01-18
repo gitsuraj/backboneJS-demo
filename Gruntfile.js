@@ -3,26 +3,26 @@ module.exports = function(grunt) {
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
     requirejs: {
-      desktopJS: {
+      mainJS: {
         options: {
           baseUrl: "public/js/app",
           paths: {
-            "desktop": "init/DesktopInit"
+            "mainScript": "init/main_script"
           },
           wrap: true,
           name: "../libs/almond",
           preserveLicenseComments: false,
           optimize: "uglify",
           mainConfigFile: "public/js/app/config/config.js",
-          include: ["desktop"],
-          out: "public/js/app/init/DesktopInit.min.js"
+          include: ["mainScript"],
+          out: "public/js/app/init/main_script.min.js"
         }
       },
-      desktopCSS: {
+      mainCSS: {
         options: {
           optimizeCss: "standard",
-          cssIn: "./public/css/desktop.css",
-          out: "./public/css/desktop.min.css"
+          cssIn: "./public/css/main_style.css",
+          out: "./public/css/main_style.min.css"
         }
       }
     },
@@ -42,7 +42,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-requirejs');
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.registerTask('test', ['jshint']);
-  grunt.registerTask('build', ['requirejs:desktopJS', 'requirejs:desktopCSS']);
+  grunt.registerTask('build', ['requirejs:mainJS', 'requirejs:mainCSS']);
   grunt.registerTask('default', ['test', 'build']);
 
 };

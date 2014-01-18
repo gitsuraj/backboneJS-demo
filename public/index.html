@@ -1,9 +1,4 @@
 <!doctype html>
-<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
-<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7 ui-mobile-rendering" lang="en"> <![endif]-->
-<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8 ui-mobile-rendering" lang="en"> <![endif]-->
-<!--[if IE 8]>    <html class="no-js lt-ie9 ui-mobile-rendering" lang="en"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js ui-mobile-rendering" lang="en"> <!--<![endif]-->
 <head>
   <meta charset="utf-8">
 
@@ -26,7 +21,7 @@
         // App Environment
         // ---------------
         //  Tip: Set to true to turn on "production" mode
-        var production = false,
+        var production = true,
           filesToLoad,
           //BoilerplateMVC Helper Methods
           boilerplateMVC = {
@@ -91,15 +86,15 @@
             // Desktop CSS and JavaScript files to load
             filesToLoad = {
               // CSS file that is loaded when in development mode
-              "dev-css": "css/desktop.css",
+              "dev-css": "css/main_style.css",
               // CSS file that is loaded when in production mode
-              "prod-css": "css/desktop.min.css",
+              "prod-css": "css/main_style.min.css",
               // Require.js configuration file that is also loaded when in development mode
               "dev-js": { "data-main": "js/app/config/config.js", "src": "js/libs/require.js" },
               // JavaScript initialization file that is loaded when in development mode
-              "dev-init": "js/app/init/DesktopInit.js",
+              "dev-init": "js/app/init/main_script.js",
               // JavaScript file that is loaded when in production mode
-              "prod-js": "js/app/init/DesktopInit.min.js"
+              "prod-js": "js/app/init/main_script.min.js"
             };
 
           boilerplateMVC.loadFiles(production, filesToLoad, function() {

@@ -1,5 +1,5 @@
 <section>
-    <div id="title">
+    <div id="title"><br/><br/>
       <h1>Backbone JS Demo</h1>
       <center><p>use &harr; to navigate.</p></center>
       <p class="footer">
@@ -9,25 +9,24 @@
     </div>
   </section>
   <section>
+  <br/><br/>
     <h1>Asynchronous Module Definition (AMD)</h1>
     <br/>
     <br/>
-    <h3>AMD is a JavaScript API for defining modules such that</h3></br><h3> the module and its dependencies can be asynchronously loaded.</h3>
     <br/>
-    <h3>API used <a href="http://requirejs.org/" target="_blank">Required JS</a></h3></br>
-    <h2>Steps</h2>
-    <center>
-    <ul>
-      <li><strong>Configure RequireJS</strong></li>
-      <li><strong>Define Packages</strong></li>
-    </ul>
-    </center>
+    <h3>API used <a href="http://requirejs.org/" target="_blank">Required JS</a></h3><br/><br/>
+    
+        <h3>Config</h3>
+        <h3>Require</h3>
+        <h3>Define</h3>
+
   </section>
 
   <section>
-    <h1>require.config</h1></br>
+  <br/>
+    <h1>require.config function()</h1><br/>
 
-    <h3>1. Define Path of JS Library </h3></br>
+    <h3>1. Define Path of JS Library </h3><br/>
     <h3>2. Manage Dependencies using Shim </h3>
     <div class="code">
       <pre class="prettyprint linenums prettyprinted demo-code">
@@ -50,19 +49,10 @@
     </div>
   </section>
 
-<section>
-  <h1>define function()</h1><br><br><br>
-  <h3>
-    The specification defines a single function "define" that is available as a free variable or a global variable.
-  <a href="https://github.com/amdjs/amdjs-api/wiki/AMD">Link</a></h3><br>
-  <div class="code"><pre class="preetiprint demo-code">define(id?, dependencies?, factory);</pre></div>
-  <h3>Using an ID is not recommended unless necessary.</h3>
-  <div class="code"><pre class="preetiprint demo-code">define(dependencies?, factory);</pre></div>
-</section>
-
   <section>
-    <h1>Main File</h1></br>
-    <h3>Start the main app logic using <strong>require</strong></h3></br>
+  <br/>
+    <h1>require function()</h1><br/>
+    <h3>Start the main app logic using <strong>require</strong></h3><br/>
     <h3>Initialize and Load required JS files</h3> 
     <div class="code">
         <pre class="prettyprint linenums prettyprinted demo-code">
@@ -84,17 +74,46 @@
     </div>
   </section>
 
-  <section>
-  <h1>UnderscoreJS _.template</h1>
-  </br>
-  <h3>Write the template's markup in an easy-to-use, PHP-tag-like syntax, then compile it with _.template into something JavaScript interpreters can understand and optimize</h3>
-  </br>
+<section>
+<br/>
+  <h1>define function()</h1><br><br><br>
+  <h3>
+    The specification defines a single function "define" that is available as a free variable or a global variable.
+  <a href="https://github.com/amdjs/amdjs-api/wiki/AMD">Link</a></h3><br>
   <div class="code">
   <pre class="prettyprint linenums prettyprinted demo-code">
-      &lt;div&lt;&lt;%= mainContent %&lt;&lt;/div&lt;
-      &lt;a href="&lt;%= link.url %&lt;" title="&lt;%- link.title %>"&lt;
-        &lt;%= link.text %&lt;
-      &lt;/a&lt;
+                              define(id?, dependencies?, factory);
+   </pre></div>
+   <br/><br/>
+  <h3>Using an ID is not recommended unless necessary.</h3>
+    <div class="code">
+  <pre class="prettyprint linenums prettyprinted demo-code">
+                              define(dependencies?, factory);
+   </pre></div>
+   <br/><br/>
+  <h3>Code Demo</h3>
+    <div class="code">
+  <pre class="prettyprint linenums prettyprinted demo-code">
+        define(["jquery", "backbone", "models/Model", "text!templates/demo1_servicelist.html"],
+                function($, Backbone, Model, template){
+                    //Your Code Here
+        });
+   </pre></div>
+</section>
+
+
+  <section>
+  <br/>
+  <h1>UnderscoreJS _.template</h1>
+  <br/>
+  <h3>Write the template's markup in an easy-to-use, PHP-tag-like syntax, then compile it with _.template into something JavaScript interpreters can understand and optimize</h3>
+  <br/>
+  <div class="code">
+  <pre class="prettyprint linenums prettyprinted demo-code">
+      &lt;div&gt;&lt;%= mainContent %&gt;&lt;/div&gt;
+      &lt;a href="&lt;%= link.url %&gt;" title="&gt;&lt;%= link.title %&gt;
+        &lt;%= link.text %&gt;
+      &lt;/a&gt;
   </pre>
   </div>
   <h3>this ↑ becomes that ↓</h3>
@@ -108,10 +127,11 @@
   </section>
 
   <section>
+  <br/>
   <h1>HandlebarJS [Templating]</h1>
-  </br>
+  <br/>
   <h3>Handlebars provides the power necessary to let you build semantic templates effectively with no frustration.</h3>
-  </br>
+  <br/>
   <div class="code">
   <pre class="prettyprint linenums prettyprinted demo-code">
   var template = Handlebars.compile(template);
@@ -137,7 +157,8 @@
   </section>
 
 <section>
-  <h1>Template Loading</h1></br>
+<br/>
+  <h1>Template Loading</h1><br/>
   <h3>Loading with Ajax</h3>
    <div class="code">
   <pre class="prettyprint linenums prettyprinted demo-code">
@@ -166,6 +187,7 @@ define(["jquery", "backbone", "models/taskModel", "views/Demo2/taskListItem", "t
 </section>
 
 <section>
+<br/>
   <h1>Events</h1><br>
    <div class="code">
   <pre class="prettyprint linenums prettyprinted demo-code">
@@ -194,6 +216,7 @@ define(["jquery", "backbone", "text!templates/Demo1.html"],
 </section>
 
 <section>
+<br/>
   <h1>Trigger</h1><br>
   <h3>Trigger callbacks for the given event, or space-delimited list of events.</h3>
 
@@ -228,17 +251,10 @@ define(["jquery", "backbone", "models/Model","collections/Collection", "text!tem
   </div>
 </section>
 
-<section>
-  <h1>Models</h1><br><br><br><br>
-
-<h2>Easy to Auto Generate</h2>
-<h2>Holds data better than DOM</h2>
-<h2>Throws Change events</h2>
-<h2>Can connect to URL to populate from or persist to the server</h2>
-</section>
 
 <section>
-  <h1>Models[Code]</h1><br>
+<br/>
+  <h1>Models</h1><br>
 
   <div class="code">
   <pre class="prettyprint linenums prettyprinted demo-code">
@@ -257,7 +273,9 @@ define(["jquery", "backbone"],
             validate: function(attrs) {
               if(_.isNull(attrs.name)){
                   //Do something
-              }
+              },
+              idAttribute:id,
+              urlRoot : base_url+'/user/getInfo'
             }
         });
         return Model;
@@ -266,16 +284,10 @@ define(["jquery", "backbone"],
   </div>
 </section>
 
-<section>
-  <h1>Collection</h1><br><br><br><br>
-
-<h2>Bulk handeling Model objects</h2>
-<h2>Throws change events</h2>
-<h2>Can connect to URL and populate from server</h2>
-</section>
 
 <section>
-  <h1>Collection[code]</h1><br>
+<br/>
+  <h1>Collection</h1><br>
 
   <div class="code">
   <pre class="prettyprint linenums prettyprinted demo-code">
@@ -286,7 +298,10 @@ define(["jquery","backbone","models/Model"],
     var Collection = Backbone.Collection.extend({
 
       // Tells the Backbone Collection that all of it's models will be of type Model 
-      model: Model
+      model: Model,
+      url: function() {
+        return base_url +'/user/notes';
+      }
     });
     return Collection;
 
@@ -296,7 +311,8 @@ define(["jquery","backbone","models/Model"],
 </section>
 
 <section>
-  <h1>Plugins</h1><br><br></br>
+<br/><br/>
+  <h1>Plugins</h1><br><br><br/>
 
       <h2>Model : Backbone-forums,Backbone-Relational,Backbone.validation</h2><br>
       <h2>Storage : Backbone.localStorage,Backbone.websql</h2><br>
@@ -338,6 +354,7 @@ define(["jquery","backbone","models/Model"],
 </section>
 
 <section>
+<br/>
   <h1>Optimization and Building</h1><br>
 
 <h3>A command line tool for running JavaScript scripts that use the AMD API for declaring and using JavaScript modules and regular JavaScript script files.</h3><br>

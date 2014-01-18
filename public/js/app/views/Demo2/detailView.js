@@ -46,8 +46,13 @@ define(["jquery", "backbone", "models/taskModel", "views/Demo2/taskListItem", "t
             },
             save_task_info : function(e){
                 var me = this;
+                if(_.isEmpty(me.model.get('id').toString())){
+                    alert("You can't Insert Empty Id");
+                    return;
+                }
                 if(me.isNewEntry){
                      if(!_.isUndefined(amplify.store("task-"+me.model.get('id')))){
+                        alert("Record Already Exist in Storage");
                         return;
                      }
                 }
